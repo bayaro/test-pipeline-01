@@ -18,7 +18,7 @@ jobs:
   call-action-01:
     uses: bayaro/test-action-01/.github/workflows/action-01.yaml@master
     with:
-      home: ${{ inputs.home }}
+      home: ${{ github.event.inputs.home }}
 
   test_job:
     name: A job to test
