@@ -19,7 +19,7 @@ jobs:
    steps:
      - uses: actions/checkout@v2
      - id: test
-       uses:
+       uses: test-action-01@master
        with:
          test-var: 'tests v0.0.1 '
      - run: echo random-number ${{ steps.test.outputs.random-number }}
