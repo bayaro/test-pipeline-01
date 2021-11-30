@@ -15,14 +15,14 @@ on:
 
 
 jobs:
- test_job:
-   runs-on: [ self-hosted, Linux, X64, Ubuntu ]
-   name: A job to test
-   steps:
-     - uses: actions/checkout@v2
-     - id: test
-       uses: bayaro/test-action-01@master
-       with:
-         home: ${{ inputs.home }}
-     - run: echo random-number ${{ steps.test.outputs.random-number }}
-       shell: bash
+  call-action-01:
+    uses: bayaro/test-action-01@master
+    with:
+      home: ${{ inputs.home }}
+
+  test_job:
+    name: A job to test
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo random-number ${{ steps.test.outputs.random-number }}
+        shell: bash
