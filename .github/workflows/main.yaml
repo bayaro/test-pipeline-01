@@ -29,6 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-        echo random-number ${{ steps.test.outputs.random-number }}
-        echo ${{ nees.call-action-01.outputs.output1 }}
+          echo random-number ${{ steps.test.outputs.random-number }}
+          echo ${{ nees.call-action-01.outputs.output1 }}
         shell: bash
