@@ -9,7 +9,7 @@ on:
       home:
         description: 'location'
         required: false
-        default: 'The Octoverse'
+        default: 'Pipiline 01'
 
 
 jobs:
@@ -21,6 +21,6 @@ jobs:
      - id: test
        uses: bayaro/test-action-01@master
        with:
-         test-var: 'tests v0.0.1 '
+         home: ${{ inputs.home }}
      - run: echo random-number ${{ steps.test.outputs.random-number }}
        shell: bash
