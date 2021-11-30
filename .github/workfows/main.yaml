@@ -1,0 +1,14 @@
+on: [push]
+
+jobs:
+ test_job:
+   runs-on: [ self-hosted, Linux, X64, Ubuntu ]
+   name: A job to test
+   steps:
+     - uses: actions/checkout@v2
+     - id: test
+       uses: 
+       with:
+         test-var: 'tests v0.0.1 '
+     - run: echo random-number ${{ steps.test.outputs.random-number }}
+       shell: bash
