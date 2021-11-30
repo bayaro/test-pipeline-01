@@ -15,6 +15,10 @@ on:
 
 
 jobs:
+  call-action-01:
+    uses: bayaro/test-action-01/action.yaml@master
+    with:
+      home: ${{ inputs.home }}
 
   test_job:
     name: A job to test
