@@ -16,7 +16,7 @@ on:
 
 jobs:
   call-action-01:
-    uses: bayaro/test-action-01/action.yaml@master
+    uses: bayaro/test-action-01/.github/workflows/main.yaml@master
     with:
       home: ${{ inputs.home }}
 
